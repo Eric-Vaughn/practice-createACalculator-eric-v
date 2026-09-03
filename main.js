@@ -108,10 +108,12 @@ console.log(welcomeMessage);
 // Will always run until the user wants to end the program
 while (isRunning) {
 
+    // Aquire user's choice
     userOperationChoice = readlineSync.question(userOptionsMessage);
 
     if (Number(userOperationChoice) === 1) {
-        // TODO
+        // Absolute value
+
     } else if (Number(userOperationChoice) === 2) {
         // TODO
     } else if (Number(userOperationChoice) === 3) {
@@ -126,6 +128,9 @@ while (isRunning) {
         // Terminate
         isRunning = false;
     }
+    
+    // Reset user's choice to a meaningless value
+    userOperationChoice = null;
 }
 
 // Task 4: Test the calculator
