@@ -54,7 +54,7 @@ function customRounding(num, numDecimals) {
     return finalNum;
 
     // Written as a single line (less readable)
-    // return Math.round(num * (10 * numDecimals)) / (10 * numDecimals);
+    // return Math.round(num * Math.pow(10, numDecimals)) / Math.pow(10, numDecimals);
 }
 
 // Task 2: Test Functions
