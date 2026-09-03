@@ -39,7 +39,7 @@ function randomNumberGenerator(min, max) {
 }
 
 function customRounding(num, numDecimals) {
-    let multipleOfTenNeeded = 10 * numDecimals; // Figure out what multi of 10 we need
+    let multipleOfTenNeeded = Math.pow(10, numDecimals); // Figure out what multi of 10 we need
     let deciShiftedNum, roundedShiftedNum, finalNum;
 
     // Multiply to keep decimals we want
@@ -171,9 +171,9 @@ while (isRunning) {
     // Round a given number to a given number of decimal places
     } else if (Number(userOperationChoice) === 6) {
         const num = readlineSync.questionFloat(`\nWhat decimal number do you want to round?: `);
-        const numDecimals = readlineSync.questionFloat(`\nWhat decimal number do you want to round?: `);
+        const numDecimals = readlineSync.questionFloat(`\nHow many decimal places do you want to round to?: `);
 
-        console.log(`The number ${num} rounded to ${numDecimals} decimal places is:`, customRounding(num, numDecimals));
+        console.log(`\nThe number ${num} rounded to ${numDecimals} decimal places is:`, customRounding(num, numDecimals));
 
     // Terminate
     } else if (Number(userOperationChoice) === 7) {
