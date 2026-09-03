@@ -182,3 +182,9 @@ while (isRunning) {
 }
 
 // Task 4: Test the calculator
+const absoluteValueNum = -45.67;
+const numToPow = 5, powToPow = 3;
+const sqrtNum = 144;
+const findMinAndMaxNumbersList = [ 3, 78, -12, 0.5, 27 ];
+const genNumberMin = 1; genNumberMax = 50;
+const roundThisNum = 23.67891; roundThisManyDeci = 2;
