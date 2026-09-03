@@ -167,8 +167,13 @@ while (isRunning) {
         }
 
         console.log(`\nGenerating a number within the range, ${min} to ${max}:`, randomNumberGenerator(min, max));
+    
+    // Round a given number to a given number of decimal places
     } else if (Number(userOperationChoice) === 6) {
-        // TODO
+        const num = readlineSync.questionFloat(`\nWhat decimal number do you want to round?: `);
+        const numDecimals = readlineSync.questionFloat(`\nWhat decimal number do you want to round?: `);
+
+        console.log(`The number ${num} rounded to ${numDecimals} decimal places is:`, customRounding(num, numDecimals));
 
     // Terminate
     } else if (Number(userOperationChoice) === 7) {
