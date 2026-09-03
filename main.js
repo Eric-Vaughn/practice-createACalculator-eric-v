@@ -85,7 +85,6 @@ console.log(`The number ${numberToBeRounded} rounded to ${num1} decimal places i
 
 // Task 3: Combine functions into a single "calculator" program
 let userOperationChoice = null;
-let userInput = null;
 let isRunning = true;
 
 const welcomeMessage = `\nWelcome to Eric Vaughn's Math module calculator application!`
@@ -109,15 +108,19 @@ while (isRunning) {
     // Aquire user's choice
     userOperationChoice = readlineSync.question(userOptionsMessage);
 
+    // Absolute value
     if (Number(userOperationChoice) === 1) {
-        // Absolute value
-        userInput = readlineSync.questionInt("What number do you want the absolute value of?: ");
+        const absValue = readlineSync.questionInt("What number do you want the absolute value of?: ");
 
         // Give the abs val of the number the user gave
-        console.log(`The absolute value of ${userInput} is:`, absoluteValueOf(userInput));
+        console.log(`The absolute value of ${absValue} is:`, absoluteValueOf(absValue));
 
+    // Raise to power
     } else if (Number(userOperationChoice) === 2) {
-        // TODO
+        const num = readlineSync.questionInt("What number do you want to raise to a power?: ");
+        const pow = readlineSync.questionInt("To what power?: ");
+
+        // console.log();
     } else if (Number(userOperationChoice) === 3) {
         // TODO
     } else if (Number(userOperationChoice) === 4) {
