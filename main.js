@@ -1,3 +1,5 @@
+const readline = require('node:readline');
+
 // Task 1: Write functions for each operation listed using the Math module
 
 function absoluteValueOf(num) {
