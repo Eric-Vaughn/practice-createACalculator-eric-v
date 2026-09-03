@@ -110,8 +110,20 @@ while (isRunning) {
 
     userOperationChoice = readlineSync.question(userOptionsMessage);
 
-    // Terminate
-    if (Number(userOperationChoice) === 7) {
+    if (Number(userOperationChoice) === 1) {
+        // TODO
+    } else if (Number(userOperationChoice) === 2) {
+        // TODO
+    } else if (Number(userOperationChoice) === 3) {
+        // TODO
+    } else if (Number(userOperationChoice) === 4) {
+        // TODO
+    } else if (Number(userOperationChoice) === 5) {
+        // TODO
+    } else if (Number(userOperationChoice) === 6) {
+        // TODO
+    } else if (Number(userOperationChoice) === 7) {
+        // Terminate
         isRunning = false;
     }
 }
