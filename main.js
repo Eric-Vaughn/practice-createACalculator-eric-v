@@ -115,17 +115,17 @@ console.log(welcomeMessage);
 // Will always run until the user wants to end the program
 while (isRunning) {
     // Aquire user's choice
-    userOperationChoice = readlineSync.question(userOptionsMessage);
+    userOperationChoice = readlineSync.questionInt(userOptionsMessage);
 
     // Absolute value
-    if (Number(userOperationChoice) === 1) {
+    if (userOperationChoice === 1) {
         const absValue = readlineSync.questionInt(`\nWhat number do you want the absolute value of?: `);
 
         // Give the abs val of the number the user gave
         console.log(`\nThe absolute value of ${absValue} is:`, absoluteValueOf(absValue));
 
     // Raise to power
-    } else if (Number(userOperationChoice) === 2) {
+    } else if (userOperationChoice === 2) {
         const num = readlineSync.questionInt(`\nWhat number do you want to raise to a power?: `);
         const pow = readlineSync.questionInt(`To what power?: `);
 
@@ -133,14 +133,14 @@ while (isRunning) {
         console.log(`${num} to the ${pow} is:`, raiseToPower(num, pow));
 
     // Square root
-    } else if (Number(userOperationChoice) === 3) {
+    } else if (userOperationChoice === 3) {
         const num = readlineSync.questionInt(`\nWhat number do you want to take the square root of?: `);
 
         // Give the square root of user's number
         console.log(`\nThe square root of ${num} is:`, sqrtFinder(num));
 
     // Find Max & Min numbers from a given list
-    } else if (Number(userOperationChoice) === 4) {
+    } else if (userOperationChoice === 4) {
         const numberListAsString = readlineSync.question(findMaxAndMinMessage);
 
         // Convert string of numbers to list of numbers as strings --> "5 3 8" => [ "5", "3", "8" ]
@@ -156,7 +156,7 @@ while (isRunning) {
         console.log(`\nThe maximum and mininmum numbers in the list are:`, findMaxAndMin(numbers));
     
     // Generate a random number within a given range
-    } else if (Number(userOperationChoice) === 5) {
+    } else if (userOperationChoice === 5) {
         const min = readlineSync.questionInt(`\nWhat should be the minimum value?: `);
         const max = readlineSync.questionInt(`What should be the maximum value?: `);
 
@@ -169,16 +169,21 @@ while (isRunning) {
         console.log(`\nGenerating a number within the range, ${min} to ${max}:`, randomNumberGenerator(min, max));
     
     // Round a given number to a given number of decimal places
-    } else if (Number(userOperationChoice) === 6) {
+    } else if (userOperationChoice === 6) {
         const num = readlineSync.questionFloat(`\nWhat decimal number do you want to round?: `);
         const numDecimals = readlineSync.questionFloat(`\nHow many decimal places do you want to round to?: `);
 
         console.log(`\nThe number ${num} rounded to ${numDecimals} decimal places is:`, customRounding(num, numDecimals));
 
     // Terminate
-    } else if (Number(userOperationChoice) === 7) {
+    } else if (userOperationChoice === 7) {
         isRunning = false;
     }
 }
 
 // Task 4: Test the calculator
+
+// Test variables
+const absoluteValue = -45.67;
+const numForPow = 5, powForPow = 3;
+const sqrtNum = 144;
