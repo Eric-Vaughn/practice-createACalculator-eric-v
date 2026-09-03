@@ -108,8 +108,10 @@ console.log(welcomeMessage);
 // Will always run until the user wants to end the program
 while (isRunning) {
 
+    userOperationChoice = readlineSync.question(userOptionsMessage);
+
     // Terminate
-    if (userOperationChoice === 7) {
+    if (Number(userOperationChoice) === 7) {
         isRunning = false;
     }
 }
