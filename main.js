@@ -1,3 +1,5 @@
+// Task 1: Write functions for each operation listed using the Math module
+
 function absoluteValueOf(num) {
     return Math.abs(num);
 }
@@ -52,3 +54,9 @@ function customRounding(num, numDecimals) {
     // Written as a single line (less readable)
     // return Math.round(num * (10 * numDecimals)) / (10 * numDecimals);
 }
+
+// Task 2: Test Functions
+
+// Task 3: Combine functions into a single "calculator" program
+
+// Task 4: Test the calculator
