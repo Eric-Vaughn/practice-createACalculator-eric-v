@@ -122,11 +122,11 @@ while (isRunning) {
         const absValue = readlineSync.questionInt(`\nWhat number do you want the absolute value of?: `);
 
         // Give the abs val of the number the user gave
-        console.log(`The absolute value of ${absValue} is:`, absoluteValueOf(absValue));
+        console.log(`\nThe absolute value of ${absValue} is:`, absoluteValueOf(absValue));
 
     // Raise to power
     } else if (Number(userOperationChoice) === 2) {
-        const num = readlineSync.questionInt(`What number do you want to raise to a power?: `);
+        const num = readlineSync.questionInt(`\nWhat number do you want to raise to a power?: `);
         const pow = readlineSync.questionInt(`To what power?: `);
 
         // Give user's num^pow
@@ -134,10 +134,10 @@ while (isRunning) {
 
     // Square root
     } else if (Number(userOperationChoice) === 3) {
-        const num = readlineSync.questionInt(`What number do you want to take the square root of?: `);
+        const num = readlineSync.questionInt(`\nWhat number do you want to take the square root of?: `);
 
         // Give the square root of user's number
-        console.log(`The square root of ${num} is:`, sqrtFinder(num));
+        console.log(`\nThe square root of ${num} is:`, sqrtFinder(num));
 
     // Find Max & Min numbers from a given list
     } else if (Number(userOperationChoice) === 4) {
@@ -153,13 +153,25 @@ while (isRunning) {
         }
 
         // Give the max & min numbers to the user
-        console.log(`The maximum and mininmum numbers in the list are:`, findMaxAndMin(numbers));
+        console.log(`\nThe maximum and mininmum numbers in the list are:`, findMaxAndMin(numbers));
+    
+    // Generate a random number within a given range
     } else if (Number(userOperationChoice) === 5) {
-        // TODO
+        const min = readlineSync.questionInt(`\nWhat should be the minimum value?: `);
+        const max = readlineSync.questionInt(`What should be the maximum value?: `);
+
+        // Make sure the user's range is possible
+        if (min > max) {
+            console.log(`\nYour minimum value, ${min}, is larger than you maximum value, ${max}.`);
+            continue; // Move on / go back to the start of the loop
+        }
+
+        console.log(`\nGenerating a number within the range, ${min} to ${max}:`, randomNumberGenerator(min, max));
     } else if (Number(userOperationChoice) === 6) {
         // TODO
+
+    // Terminate
     } else if (Number(userOperationChoice) === 7) {
-        // Terminate
         isRunning = false;
     }
 }
