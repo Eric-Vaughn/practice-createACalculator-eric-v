@@ -101,13 +101,11 @@ const userOptionsMessage =
     
     Input the number you wish to select: `;
 
-
 // Greet the user
 console.log(welcomeMessage);
 
 // Will always run until the user wants to end the program
 while (isRunning) {
-
     // Aquire user's choice
     userOperationChoice = readlineSync.question(userOptionsMessage);
 
@@ -132,9 +130,6 @@ while (isRunning) {
         // Terminate
         isRunning = false;
     }
-
-    // Reset user's choice to a meaningless value
-    userOperationChoice = null;
 }
 
 // Task 4: Test the calculator
