@@ -96,6 +96,10 @@ const userOptionsMessage =
     6: Round a given number to a given number of decimal places
     7: Exit program`;
 
+
+// Greet the user
+console.log(welcomeMessage);
+
 while (isRunning) {
 
     // Terminate
