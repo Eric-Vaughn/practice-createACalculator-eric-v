@@ -113,6 +113,14 @@ while (isRunning) {
 
     if (Number(userOperationChoice) === 1) {
         // Absolute value
+        userInput = readlineSync.question("What number do you want the absolute value of?: ");
+
+        // Give the abs val of the number the user gave
+        if (typeof(Number(userInput)) === Number) {
+            console.log(`The absolute value of ${userInput} is:`, absoluteValueOf(userInput));
+        } else {
+            console.log(`${userInput} is not a number.`);
+        }
 
     } else if (Number(userOperationChoice) === 2) {
         // TODO
@@ -128,7 +136,7 @@ while (isRunning) {
         // Terminate
         isRunning = false;
     }
-    
+
     // Reset user's choice to a meaningless value
     userOperationChoice = null;
 }
