@@ -105,6 +105,7 @@ const userOptionsMessage =
 // Greet the user
 console.log(welcomeMessage);
 
+// Will always run until the user wants to end the program
 while (isRunning) {
 
     // Terminate
