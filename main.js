@@ -88,9 +88,9 @@ let userOperationChoice = null;
 let userInput = null;
 let isRunning = true;
 
-const welcomeMessage = `Welcome to Eric Vaughn's Math module calculator application!`
+const welcomeMessage = `\nWelcome to Eric Vaughn's Math module calculator application!`
 const userOptionsMessage =
-    `Please select one of the following options:
+    `\nPlease select one of the following options:
     1: Get the absolute value of a number
     2: Take raise a number by a power
     3: Take the square root of a number
@@ -113,14 +113,10 @@ while (isRunning) {
 
     if (Number(userOperationChoice) === 1) {
         // Absolute value
-        userInput = readlineSync.question("What number do you want the absolute value of?: ");
+        userInput = readlineSync.questionInt("What number do you want the absolute value of?: ");
 
         // Give the abs val of the number the user gave
-        if (typeof(Number(userInput)) === Number) {
-            console.log(`The absolute value of ${userInput} is:`, absoluteValueOf(userInput));
-        } else {
-            console.log(`${userInput} is not a number.`);
-        }
+        console.log(`The absolute value of ${userInput} is:`, absoluteValueOf(userInput));
 
     } else if (Number(userOperationChoice) === 2) {
         // TODO
