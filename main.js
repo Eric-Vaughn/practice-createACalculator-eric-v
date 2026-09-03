@@ -16,7 +16,7 @@ function findMaxAndMin(nums) {
     let maxNum = Math.max(nums);
     let minNum = Math.min(nums);
 
-    return {"max": maxNum, "min": minNum }
+    return {"max": maxNum, "min": minNum };
 }
 
 function randomNumberGenerator(min, max) {
@@ -56,6 +56,30 @@ function customRounding(num, numDecimals) {
 }
 
 // Task 2: Test Functions
+let num1 = 2;
+let num2 = 16;
+let negativeNum = -33;
+let testNumList = [ 3, -1, 13, 9, 10, 7, 1 ];
+let randomNumber = null;
+let numberToBeRounded = -4.734095038451;
+
+// Absolute value
+console.log(`The absolute value of ${negativeNum} is:`, absoluteValueOf(negativeNum));
+
+// Number to a power
+console.log(`${num1} to the power of ${num2} is:`, pow(num1, num2));
+
+// Square root
+console.log(`The square root of ${num2} is:`, sqrtFinder(num2));
+
+// Find Max & Min
+console.log(`The Max & Min of [ ${testNumList} ] is:`, findMaxAndMin(testNumList));
+
+// Random Number
+console.log(`Generating a random number between ${num1} and ${num2} is:`, randomNumberGenerator(num1, num2));
+
+// Custom rounding
+console.log(`The number ${numberToBeRounded} rounded to ${num1} decimal places is:`, customRounding(numberToBeRounded, num1));
 
 // Task 3: Combine functions into a single "calculator" program
 
