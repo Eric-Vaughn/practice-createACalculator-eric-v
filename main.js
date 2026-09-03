@@ -13,8 +13,8 @@ function sqrtFinder(num) {
 }
 
 function findMaxAndMin(nums) {
-    let maxNum = Math.max(nums);
-    let minNum = Math.min(nums);
+    let maxNum = Math.max(...nums);
+    let minNum = Math.min(...nums);
 
     return {"max": maxNum, "min": minNum };
 }
