@@ -130,7 +130,7 @@ while (isRunning) {
         const pow = readlineSync.questionInt(`To what power?: `);
 
         // Give user's num^pow
-        console.log(`${num} to the ${pow} is:`, raiseToPower(num, pow));
+        console.log(`${num} to the ${pow} power is:`, raiseToPower(num, pow));
 
     // Square root
     } else if (userOperationChoice === 3) {
