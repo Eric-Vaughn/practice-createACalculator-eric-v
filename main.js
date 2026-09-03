@@ -91,7 +91,7 @@ const welcomeMessage = `\nWelcome to Eric Vaughn's Math module calculator applic
 const userOptionsMessage =
     `\nPlease select one of the following options:
     1: Get the absolute value of a number
-    2: Take raise a number by a power
+    2: Raise a number by a power
     3: Take the square root of a number
     4: Find the maximum and minimum numbers in a given list
     5: Generate a random number within a given range
@@ -99,6 +99,15 @@ const userOptionsMessage =
     7: Exit program
     
     Input the number you wish to select: `;
+
+const findMaxAndMinMessage = `
+    \nWhat is the list of numbers you want to find the maximum and minimum of? 
+    Please seperate the numbers of your list by a single space, like this:
+    
+    # # # # # # #
+    
+    Your list: `;
+
 
 // Greet the user
 console.log(welcomeMessage);
@@ -122,10 +131,29 @@ while (isRunning) {
 
         // Give user's num^pow
         console.log(`${num} to the ${pow} is:`, raiseToPower(num, pow));
+
+    // Square root
     } else if (Number(userOperationChoice) === 3) {
-        // TODO
+        const num = readlineSync.questionInt(`What number do you want to take the square root of?: `);
+
+        // Give the square root of user's number
+        console.log(`The square root of ${num} is:`, sqrtFinder(num));
+
+    // Find Max & Min numbers from a given list
     } else if (Number(userOperationChoice) === 4) {
-        // TODO
+        const numberListAsString = readlineSync.question(findMaxAndMinMessage);
+
+        // Convert string of numbers to list of numbers as strings --> "5 3 8" => [ "5", "3", "8" ]
+        const listOfStringsButTheyAreNumbers = numberListAsString.split(" ");
+
+        // Retrieve the string-numbers as numbers
+        let numbers = [];
+        for (string of listOfStringsButTheyAreNumbers) {
+            numbers.push(Number(string));
+        }
+
+        // Give the max & min numbers to the user
+        console.log(`The maximum and mininmum numbers in the list are:`, findMaxAndMin(numbers));
     } else if (Number(userOperationChoice) === 5) {
         // TODO
     } else if (Number(userOperationChoice) === 6) {
