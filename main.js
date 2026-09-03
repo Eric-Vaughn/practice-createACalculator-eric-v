@@ -1,4 +1,4 @@
-const readline = require('node:readline');
+const readlineSync = require('readline-sync');
 
 // Task 1: Write functions for each operation listed using the Math module
 
