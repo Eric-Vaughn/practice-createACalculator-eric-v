@@ -6,7 +6,7 @@ function absoluteValueOf(num) {
     return Math.abs(num);
 }
 
-function pow(num, power) {
+function raiseToPower(num, power) {
     return Math.pow(num, power);
 }
 
@@ -69,7 +69,7 @@ let numberToBeRounded = -4.734095038451;
 console.log(`The absolute value of ${negativeNum} is:`, absoluteValueOf(negativeNum));
 
 // Number to a power
-console.log(`${num1} to the power of ${num2} is:`, pow(num1, num2));
+console.log(`${num1} to the power of ${num2} is:`, raiseToPower(num1, num2));
 
 // Square root
 console.log(`The square root of ${num2} is:`, sqrtFinder(num2));
@@ -110,17 +110,18 @@ while (isRunning) {
 
     // Absolute value
     if (Number(userOperationChoice) === 1) {
-        const absValue = readlineSync.questionInt("What number do you want the absolute value of?: ");
+        const absValue = readlineSync.questionInt(`\nWhat number do you want the absolute value of?: `);
 
         // Give the abs val of the number the user gave
         console.log(`The absolute value of ${absValue} is:`, absoluteValueOf(absValue));
 
     // Raise to power
     } else if (Number(userOperationChoice) === 2) {
-        const num = readlineSync.questionInt("What number do you want to raise to a power?: ");
-        const pow = readlineSync.questionInt("To what power?: ");
+        const num = readlineSync.questionInt(`What number do you want to raise to a power?: `);
+        const pow = readlineSync.questionInt(`To what power?: `);
 
-        // console.log();
+        // Give user's num^pow
+        console.log(`${num} to the ${pow} is:`, raiseToPower(num, pow));
     } else if (Number(userOperationChoice) === 3) {
         // TODO
     } else if (Number(userOperationChoice) === 4) {
