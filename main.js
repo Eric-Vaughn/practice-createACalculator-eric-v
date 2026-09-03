@@ -182,8 +182,21 @@ while (isRunning) {
 }
 
 // Task 4: Test the calculator
-
-// Test variables
-const absoluteValue = -45.67;
-const numForPow = 5, powForPow = 3;
+const absoluteValueNum = -45.67;
+const numToPow = 5, powToPow = 3;
 const sqrtNum = 144;
+const findMinAndMaxNumbersList = [ 3, 78, -12, 0.5, 27 ];
+const genNumberMin = 1; genNumberMax = 50;
+const roundThisNum = 23.67891; roundThisManyDeci = 2;
+
+console.log(`\n
+    **************************************
+    This is Task 4: Testing the Calculator
+    **************************************`);
+
+console.log(`\nThe absolute value of ${absoluteValueNum} is:`, absoluteValueOf(absoluteValueNum));
+console.log(`${numToPow} to the ${powToPow} power is:`, raiseToPower(numToPow, powToPow));
+console.log(`\nThe square root of ${sqrtNum} is:`, sqrtFinder(sqrtNum));
+console.log(`\nThe maximum and mininmum numbers in the list are:`, findMaxAndMin(findMinAndMaxNumbersList));
+console.log(`\nGenerating a number within the range, ${genNumberMin} to ${genNumberMax}:`, randomNumberGenerator(genNumberMin, genNumberMax));
+console.log(`\nThe number ${roundThisNum} rounded to ${roundThisManyDeci} decimal places is:`, customRounding(roundThisNum, roundThisManyDeci));
