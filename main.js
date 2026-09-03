@@ -82,13 +82,24 @@ console.log(`Generating a random number between ${num1} and ${num2} is:`, random
 console.log(`The number ${numberToBeRounded} rounded to ${num1} decimal places is:`, customRounding(numberToBeRounded, num1));
 
 // Task 3: Combine functions into a single "calculator" program
-let userChoice = null;
+let userOperationChoice = null;
+let userInput = null;
 let isRunning = true;
+
+const welcomeMessage = `Welcome to Eric Vaughn's Math module calculator application!`
+const userOptionsMessage =
+    `1: Get the absolute value of a number
+    2: Take raise a number by a power
+    3: Take the square root of a number
+    4: Find the maximum and minimum numbers in a given list
+    5: Generate a random number within a given range
+    6: Round a given number to a given number of decimal places
+    7: Exit program`;
 
 while (isRunning) {
 
     // Terminate
-    if (userChoice === 7) {
+    if (userOperationChoice === 7) {
         isRunning = false;
     }
 }
