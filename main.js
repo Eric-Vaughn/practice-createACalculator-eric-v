@@ -82,5 +82,15 @@ console.log(`Generating a random number between ${num1} and ${num2} is:`, random
 console.log(`The number ${numberToBeRounded} rounded to ${num1} decimal places is:`, customRounding(numberToBeRounded, num1));
 
 // Task 3: Combine functions into a single "calculator" program
+let userChoice = null;
+let isRunning = true;
+
+while (isRunning) {
+
+    // Terminate
+    if (userChoice === 7) {
+        isRunning = false;
+    }
+}
 
 // Task 4: Test the calculator
